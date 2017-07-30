@@ -7,6 +7,7 @@ window.parameters = parameters;
 const DOM = {
   app: document.getElementById('app'),
   stage: document.getElementById('stage'),
+  strobe: document.getElementById('strobe'),
 };
 
 const PARAMS = parameters({
@@ -29,11 +30,10 @@ export default () => {
   fps(requestAnimationFrame)(60, () => {
     const now = new Date;
 
-    // Process
     const delta = now.getTime() - then.getTime();
+
     accumulator = accumulator + delta;
 
-    // Event
     const n = total + remap(accumulator, {
       in: {
         min: 0.0,
@@ -45,13 +45,6 @@ export default () => {
       }
     });
 
-    DOM.stage.innerHTML = `
-      ${n.toFixed(2)}
-    `;
-
-    textFit(DOM.stage, { maxFontSize: 500 });
-
-    // Reset
     then = now;
 
     if (accumulator >= offset) {
@@ -59,5 +52,10 @@ export default () => {
       total = total + 1;
       offset = offset + increment;
     }
+
+    // Render
+    DOM.stage.innerHTML = n.toFixed(2);
+    textFit(DOM.stage, { maxFontSize: 500 });
+    DOM.stage.style.opacity = 1.0 - (accumulator / 1000.0);
   })();
 };
