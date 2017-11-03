@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "frame-interval": "^0.0.2",
-    "queryparams": "0.0.7",
+    "queryparams": "^0.1.0",
     "textfit": "^2.3.1"
   }
 }

@@ -32,21 +32,27 @@ body {
   letter-spacing: -0.03125em;
 }
 
-.app,
-.stage {
+.app {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
-.app {
-  display: table;
+.wrap {
+  margin: 0 auto;
 }
 
-.stage {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: center;
-  padding: 10%;
+.second {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: default;
   user-select: none;
+  font-size: 100rem;
 }

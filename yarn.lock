@@ -2910,9 +2910,9 @@ qs@6.4.0, qs@^6.3.0, qs@~6.4.0:
   version "6.4.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
 
-queryparams@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-0.0.7.tgz#9326de0268a02c0e2de34af796e6553b5cb56b36"
+queryparams@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/queryparams/-/queryparams-0.1.0.tgz#8a467d637231e96f26b401bf622943d100e9fd55"
   dependencies:
     qs "^6.3.0"
 
