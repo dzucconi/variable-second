@@ -11,7 +11,7 @@ const DOM = {
 };
 
 const PARAMS = parameters({
-  values: [0.9],
+  values: [1.0],
   increment: 0.0,
   pulse: false,
 });
